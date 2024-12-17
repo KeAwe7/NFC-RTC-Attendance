@@ -1,7 +1,7 @@
 DEVICE     = atmega328p
 CLOCK      = 16000000
 PROGRAMMER = -c arduino -b 115200 -P /dev/ttyACM0
-OBJECTS    = main.o twi_master.o lcd.o pn532.o rtc.o
+OBJECTS    = main.o twi_master.o lcd.o rtc.o uart.o pn532_spi.o spi.o
 TEST_OBJECTS = test.o twi_master.o lcd.o
 FUSES      = -U hfuse:w:0xde:m -U lfuse:w:0xff:m -U efuse:w:0x05:m
 
